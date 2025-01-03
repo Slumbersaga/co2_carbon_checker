@@ -1,0 +1,260 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    min-height: 100vh;
+  }
+  /* Re usable classes */
+  .container {
+     display: flex;
+    flex-direction: column;
+    height: auto;
+      margin: auto;
+    max-width: 1080px;
+  
+  }
+  h1,
+  h2,
+  h3 {
+    font-weight: 600;
+       margin: 1rem 0;
+    letter-spacing: .5px;
+  
+  }
+  h1 {
+       font-size: 2.6rem;
+     color: #2c3e50;
+  
+       margin: 1rem 0 1.8rem;
+        text-transform:uppercase;
+  
+  }
+  h2 {
+       font-size:1.75rem;
+        color:#34495e;
+  
+    padding:.4rem 0;
+  
+       margin:1.5rem 0;
+  }
+  
+  h3{
+  
+       color: #34495e;
+      font-weight:700;
+        font-size:1.15rem;
+       padding-bottom: .6rem;
+  
+       margin-bottom:.8rem;
+         border-bottom: 1px solid rgba(0, 0, 0, .09);
+     }
+  
+  
+  .map-results{
+  
+     display:flex;
+     flex-direction:row;
+     flex-grow: 1;
+     padding: 2rem 0;
+  
+  
+  }
+  
+  
+  /*Header css start */
+  .header {
+       background-color: #fff;
+     padding: 1rem;
+  
+   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+   display: flex;
+    flex-direction:column;
+  
+       z-index:100;
+  
+  
+  }
+  
+  
+  .header nav {
+    margin: 0 0 .8rem 0;
+  
+  
+  }
+  .header a {
+       color: #333;
+    text-decoration: underline;
+  
+  }
+  
+  
+  /* Input container for each Input block */
+  
+  .input-container {
+    display: flex;
+        flex-direction: row;
+      flex-wrap: wrap;
+    gap: .8rem;
+  }
+  
+  /* Each group having one label + 1 Input*/
+  
+  .input-group {
+   display: flex;
+       flex-direction:column;
+  
+  }
+  
+  
+  .input-group label{
+  
+    font-weight: 600;
+      margin-bottom:.4rem;
+  
+    font-size: 1rem;
+  
+  }
+  
+  
+  .input-container input[type="text"],
+  .input-container select,
+  .input-container button {
+       padding:.8rem;
+      font-size: .95rem;
+  
+        background: #fff;
+     border: 1px solid #ddd;
+     border-radius: .5rem;
+  
+    box-sizing: border-box;
+  
+     margin:0;
+       min-width: 140px;
+  }
+  
+  
+  .input-container input[type="text"] {
+  
+     width:320px;
+  }
+  
+  /* button for find route */
+  
+  .input-container button {
+  
+      background-color: #007bff;
+    color: #fff;
+    border: none;
+  
+      cursor:pointer;
+  
+    transition: background-color .3s ease-in;
+  
+  }
+  
+  .input-container button:hover {
+      background-color: #0056b3;
+  }
+  /* Map and results container section */
+  
+  #map{
+     width: 66%;
+  
+     height: 100%;
+  
+     border-radius: .5rem;
+  
+   overflow:hidden;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+  
+  }
+  
+  /* results component styles on right */
+  .results{
+  
+       width:30%;
+      padding: 1rem;
+     box-sizing: border-box;
+       background-color: #fff;
+  
+      margin-left:2rem;
+          border-radius: .5rem;
+  
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  
+      overflow-y:auto; /*setting up all extra content */
+  
+  }
+  
+  
+  /* specific layout item in the right hand section  route detail and emission etc components */
+  
+  
+  #route-details,
+  #co2-emission,
+  #transport-options{
+  
+       margin-bottom:1.3rem;
+      padding: 1rem;
+  }
+  
+  
+  #route-details p,
+  #co2-emission p{
+        line-height:1.8;
+    font-weight: 500;
+    margin:.5rem 0
+  }
+  #route-details h3,
+  #co2-emission h3{
+  
+        font-weight:700;
+  
+         font-size:1.25rem;
+          color: #333;
+  
+  }
+  
+  
+  /* Specific Styles on error display component */
+  .error{
+  
+   color:red;
+      padding:.5rem .8rem;
+       margin: .5rem 0;
+     border-radius:.5rem;
+  
+  
+  }
+  
+  
+  .hidden{
+  
+     display:none;
+  
+  }
+  
+  
+  /* Navigation bar styles  basic styles such as position sticky top are removed and basic padding styles added*/
+  nav {
+  
+   background: black;
+     z-index:2;
+  
+       padding: 0.6rem 0rem ;
+    /*setting up a correct structure for the navbar element only and not with sticky positioning and other styles  */
+  }
+  nav a, nav span{
+  
+       color: #ddd;
+   text-decoration:none;
+  }
+  
+  
+  nav .flex{
+   display: flex;
+       flex-direction:row;
+  }
